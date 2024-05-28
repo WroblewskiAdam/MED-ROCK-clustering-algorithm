@@ -5,24 +5,24 @@ from random import random;
 import csv
 
 
-file1 = open('moje_point_neighbour_matrix.csv')
+file1 = open('dataset.csv')
 reader1 = csv.reader(file1)
-data1 = list(reader1)
+data = list(reader1)
 
-file2 = open('obce_point_neighbour_matrix.csv')
-reader2 = csv.reader(file2)
-data2 = list(reader2)
+# file2 = open('obce_point_neighbour_matrix.csv')
+# reader2 = csv.reader(file2)
+# data2 = list(reader2)
 
-print(data1 == data2)
+# print(data1 == data2)
 
 
 
 # # print(data)
 
-# rock_instance = rock(data, 0.5, 2, 0.2)
+rock_instance = rock(data, 0.5, 2, 0.2)
 
-# rock_instance.process()
+rock_instance.process()
 
-# clusters = rock_instance.get_clusters()
+clusters = rock_instance.get_clusters()
 
-# print(clusters)
+print(clusters)

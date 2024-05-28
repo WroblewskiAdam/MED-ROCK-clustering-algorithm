@@ -1,4 +1,6 @@
 import numpy as np
+import pandas as pd
+
 
 class ROCK:
     def __init__(self):
@@ -22,6 +24,7 @@ class ROCK:
 
     def calculate_similiarity_matrix(self, data):
         points_num = len(data)
+        # points_num = data.shape[0] #df
         matrix = np.zeros((points_num,points_num))
         for i in range(0, points_num):
             a = data[i]
@@ -32,8 +35,10 @@ class ROCK:
             matrix[i][i] = 1
         self.similarity_matrix = matrix
 
+
     def calculate_adjacency_matrix(self, data, phi):
         points_num = len(data)
+        # points_num = data.shape[0] #df
         matrix = np.zeros((points_num,points_num))
         self.calculate_similiarity_matrix(data)
         for i in range(0, points_num):
@@ -89,6 +94,7 @@ class ROCK:
 
 
     def get_clusters(self, data, phi, cluster_num, theta = 0.5):
+        # data = data.values.tolist()
         theta = phi
         self.calculate_adjacency_matrix(data, phi)
         self.get_links_matrix(self.adjacency_matrix)
