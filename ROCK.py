@@ -102,7 +102,6 @@ def rock(data, phi, cluster_num, theta = 0.5):
     return clusters
 
 
-
 def run():
     with open('dataset.csv') as file:
         reader = csv.reader(file)

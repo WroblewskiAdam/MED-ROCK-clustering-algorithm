@@ -1,0 +1,297 @@
+Jaccard
+theta= 0.01 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.02 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.03 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.04 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.05 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.06 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.07 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.08 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.09 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.1 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.11 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.12 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.13 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.14 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.15 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.16 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.17 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.18 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.19 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.2 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.21 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.22 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.23 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.24 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.25 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.26 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.27 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.28 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.29 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.3 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.31 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.32 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.33 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.34 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.35 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.36 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.37 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.38 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.39 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.4 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.41 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.42 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.43 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.44 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.45 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.46 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.47 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.48 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.49 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.5 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.51 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.52 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.53 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.54 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.55 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.56 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.57 score= 0.6160919540229886 num_of_clusters 2
+theta= 0.58 score= 0.6137931034482759 num_of_clusters 2
+theta= 0.59 score= 0.6137931034482759 num_of_clusters 2
+theta= 0.6 score= 0.6137931034482759 num_of_clusters 2
+theta= 0.61 score= 0.6137931034482759 num_of_clusters 2
+theta= 0.62 score= 0.6137931034482759 num_of_clusters 2
+theta= 0.63 score= 0.6137931034482759 num_of_clusters 2
+theta= 0.64 score= 0.6137931034482759 num_of_clusters 2
+theta= 0.65 score= 0.6137931034482759 num_of_clusters 2
+theta= 0.66 score= 0.6137931034482759 num_of_clusters 2
+theta= 0.67 score= 0.6137931034482759 num_of_clusters 2
+theta= 0.68 score= 0.6137931034482759 num_of_clusters 2
+theta= 0.69 score= 0.6137931034482759 num_of_clusters 2
+theta= 0.7 score= 0.6137931034482759 num_of_clusters 2
+theta= 0.71 score= 0.6137931034482759 num_of_clusters 2
+theta= 0.72 score= 0.6137931034482759 num_of_clusters 2
+theta= 0.73 score= 0.6137931034482759 num_of_clusters 2
+theta= 0.74 score= 0.6137931034482759 num_of_clusters 2
+theta= 0.75 score= 0.6137931034482759 num_of_clusters 2
+theta= 0.76 score= 0.6137931034482759 num_of_clusters 2
+theta= 0.77 score= 0.6137931034482759 num_of_clusters 2
+theta= 0.78 score= 0.9057471264367816 num_of_clusters 2
+theta= 0.79 score= 0.903448275862069 num_of_clusters 2
+theta= 0.8 score= 0.903448275862069 num_of_clusters 2
+theta= 0.81 score= 0.8988505747126436 num_of_clusters 2
+theta= 0.82 score= 0.896551724137931 num_of_clusters 2
+theta= 0.83 score= 0.896551724137931 num_of_clusters 2
+theta= 0.84 score= 0.8758620689655172 num_of_clusters 2
+theta= 0.85 score= 0.8735632183908046 num_of_clusters 2
+theta= 0.86 score= 0.8298850574712644 num_of_clusters 2
+theta= 0.87 score= 0.8298850574712644 num_of_clusters 2
+theta= 0.88 score= 0.7540229885057471 num_of_clusters 2
+theta= 0.89 score= 0.6528735632183909 num_of_clusters 2
+theta= 0.9 score= 0.6528735632183909 num_of_clusters 2
+theta= 0.91 score= 0.6252873563218391 num_of_clusters 2
+theta= 0.92 score= 0.6252873563218391 num_of_clusters 2
+theta= 0.93 score= 0.6252873563218391 num_of_clusters 2
+theta= 0.94 score= 0.6252873563218391 num_of_clusters 2
+theta= 0.95 score= 0.6252873563218391 num_of_clusters 2
+theta= 0.96 score= 0.6252873563218391 num_of_clusters 2
+theta= 0.97 score= 0.6252873563218391 num_of_clusters 2
+theta= 0.98 score= 0.6252873563218391 num_of_clusters 2
+theta= 0.99 score= 0.6252873563218391 num_of_clusters 2
+
+
+theta= 0.05 score= 61.6 num_of_clusters 2
+No. republican 167
+No. democrat 267  
+No. republican 1  
+No. democrat 0    
+theta= 0.1 score= 61.6 num_of_clusters 2
+No. republican 167
+No. democrat 267  
+No. republican 1  
+No. democrat 0    
+theta= 0.15 score= 61.6 num_of_clusters 2
+No. republican 167
+No. democrat 267
+No. republican 1
+No. democrat 0
+theta= 0.2 score= 61.6 num_of_clusters 2
+No. republican 167
+No. democrat 267
+No. republican 1
+No. democrat 0
+theta= 0.25 score= 61.6 num_of_clusters 2
+No. republican 167
+No. democrat 267
+No. republican 1
+No. democrat 0
+theta= 0.3 score= 61.6 num_of_clusters 2
+No. republican 166
+No. democrat 266
+No. republican 2
+No. democrat 1
+theta= 0.35 score= 61.6 num_of_clusters 2
+No. republican 166
+No. democrat 266
+No. republican 2
+No. democrat 1
+theta= 0.4 score= 61.6 num_of_clusters 2
+No. republican 166
+No. democrat 266
+No. republican 2
+No. democrat 1
+theta= 0.45 score= 61.6 num_of_clusters 2
+No. republican 166
+No. democrat 266
+No. republican 2
+No. democrat 1
+theta= 0.5 score= 61.6 num_of_clusters 2
+No. republican 166
+No. democrat 266
+No. republican 2
+No. democrat 1
+theta= 0.55 score= 61.6 num_of_clusters 2
+No. republican 166
+No. democrat 266
+No. republican 2
+No. democrat 1
+theta= 0.6 score= 61.4 num_of_clusters 2
+No. republican 166
+No. democrat 263
+No. republican 2
+No. democrat 4
+theta= 0.65 score= 61.4 num_of_clusters 2
+No. republican 164
+No. democrat 262
+No. republican 4
+No. democrat 5
+theta= 0.7 score= 61.4 num_of_clusters 2
+No. republican 163
+No. democrat 247
+No. republican 5
+No. democrat 20
+theta= 0.75 score= 61.4 num_of_clusters 2
+No. republican 158
+No. democrat 226
+No. republican 10
+No. democrat 41
+theta= 0.8 score= 89.9 num_of_clusters 2
+No. republican 140
+No. democrat 16
+No. republican 28
+No. democrat 251
+theta= 0.85 score= 87.4 num_of_clusters 2
+No. republican 125
+No. democrat 12
+No. republican 43
+No. democrat 255
+theta= 0.9 score= 62.5 num_of_clusters 2
+No. republican 5
+No. democrat 0
+No. republican 163
+No. democrat 267
+theta= 0.95 score= 62.5 num_of_clusters 2
+No. republican 5
+No. democrat 0
+No. republican 163
+No. democrat 267
+
+sornsen
+theta= 0.05 score= 61.6 num_of_clusters 2
+No. republican 167
+No. democrat 267
+No. republican 1
+No. democrat 0
+theta= 0.1 score= 61.6 num_of_clusters 2
+No. republican 167
+No. democrat 267
+No. republican 1
+No. democrat 0
+theta= 0.15 score= 61.6 num_of_clusters 2
+No. republican 167
+No. democrat 267
+No. republican 1
+No. democrat 0
+theta= 0.2 score= 61.6 num_of_clusters 2
+No. republican 167
+No. democrat 267
+No. republican 1
+No. democrat 0
+theta= 0.25 score= 61.6 num_of_clusters 2
+No. republican 167
+No. democrat 267
+No. republican 1
+No. democrat 0
+theta= 0.3 score= 61.6 num_of_clusters 2
+No. republican 167
+No. democrat 267
+No. republican 1
+No. democrat 0
+theta= 0.35 score= 61.6 num_of_clusters 2
+No. republican 167
+No. democrat 267
+No. republican 1
+No. democrat 0
+theta= 0.4 score= 61.6 num_of_clusters 2
+No. republican 167
+No. democrat 267
+No. republican 1
+No. democrat 0
+theta= 0.45 score= 61.6 num_of_clusters 2
+No. republican 166
+No. democrat 266
+No. republican 2
+No. democrat 1
+theta= 0.5 score= 61.6 num_of_clusters 2
+No. republican 166
+No. democrat 266
+No. republican 2
+No. democrat 1
+theta= 0.55 score= 61.6 num_of_clusters 2
+No. republican 166
+No. democrat 266
+No. republican 2
+No. democrat 1
+theta= 0.6 score= 61.6 num_of_clusters 2
+No. republican 166
+No. democrat 266
+No. republican 2
+No. democrat 1
+theta= 0.65 score= 61.6 num_of_clusters 2
+No. republican 166
+No. democrat 266
+No. republican 2
+No. democrat 1
+theta= 0.7 score= 61.6 num_of_clusters 2
+No. republican 166
+No. democrat 266
+No. republican 2
+No. democrat 1
+theta= 0.75 score= 61.4 num_of_clusters 2
+No. republican 166
+No. democrat 263
+No. republican 2
+No. democrat 4
+theta= 0.8 score= 61.4 num_of_clusters 2
+No. republican 164
+No. democrat 258
+No. republican 4
+No. democrat 9
+theta= 0.85 score= 61.4 num_of_clusters 2
+No. republican 159
+No. democrat 239
+No. republican 9
+No. democrat 28
+theta= 0.9 score= 89.7 num_of_clusters 2
+No. republican 135
+No. democrat 12
+No. republican 33
+No. democrat 255
+theta= 0.95 score= 62.5 num_of_clusters 2
+No. republican 5
+No. democrat 0
+No. republican 163
+No. democrat 267
+
+
+Euclidean

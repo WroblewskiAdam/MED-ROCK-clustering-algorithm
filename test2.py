@@ -21,7 +21,6 @@ def convert(df, column_name, attribures_list):
     df["class"] = df_mod["class"]
     # konwersja danych do int
     df = df.astype(int)
-
     return df
     
 def split_data_class(list_data):
@@ -45,6 +44,8 @@ def convert_data_to_index(list_data):
 
 
 zoo, meta = arff.loadarff('zoo.arff')
+print(type(zoo))
+print(zoo)
 df = pd.DataFrame(zoo)
 
 df = pd.read_csv('dataset3.csv')

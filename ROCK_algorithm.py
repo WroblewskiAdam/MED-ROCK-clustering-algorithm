@@ -1,46 +1,117 @@
 import numpy as np
-import pandas as pd
-
+import math
+import copy
 
 class ROCK:
-    def __init__(self):
+    def __init__(self, data_binary):
+        self.data_binary = copy.deepcopy(data_binary)
+        self.data_index = self.convert_data_to_index(data_binary)
         self.similarity_matrix = None
         self.adjacency_matrix = None
         self.links_matrix = None
         self.clusters = None
+        self.clusters_points = None
+        self.clusters_classes = None
+        self.function = None
+        self.number_of_points = len(data_binary)
+
+
+    def convert_data_to_index(self, data_binary):
+        arr_data = data_binary.copy()
+        for i in range(len(arr_data)):
+            point_data = arr_data[i][0]
+            point_data_index = []
+            for j in range(len(point_data)):
+                if int(point_data[j]) == 1: point_data_index.append(j)
+            arr_data[i][0] = point_data_index
+        return arr_data
+
+    def get_intersection_sum_len(self, a, b):
+        intersection_len = 0
+        sum_len = 0
+        for i in range(len(a)):
+            if a[i] == b[i] and a[i] != 0 and b[i] != 0:
+                intersection_len += 1
+            if a[i] == 1 or b[i] == 1:
+                sum_len += 1
+        return (intersection_len, sum_len)
     
-
-    def calculate_jaccard_coefficient(self, a, b):
-        A = set(a)
-        B = set(b)
-        intersection = A.intersection(B)
-        sum = A.union(B)
-
-        if len(A) == 0 or len(B) == 0:
+    def calculate_jaccard_coefficient_binary(self, a, b):
+        if len(b) == 0 or len(a) == 0:
             return 0
         else:
-            return len(intersection)/len(sum)
+            intersection, sum = self.get_intersection_sum_len(a,b)
+            return intersection/sum
+        
+
+    # def calculate_jaccard_coefficient_index(self, a, b):
+    #     A = set(a)
+    #     B = set(b)
+    #     intersection = A.intersection(B)
+    #     sum = A.union(B)
+    #     if len(b) == 0 or len(a) == 0:
+    #         return 0
+    #     else:
+    #         return len(intersection)/len(sum)
 
 
-    def calculate_similiarity_matrix(self, data):
-        points_num = len(data)
-        # points_num = data.shape[0] #df
+    def calculate_soresen_coefficient(self, a, b):
+        if len(b) == 0 or len(a) == 0:
+            return 0
+        else:
+            intersection, sum = self.get_intersection_sum_len(a,b)
+            sum_a = 0
+            sum_b = 0
+            
+            for i in range(len(a)):
+                sum_a += a[i]
+                sum_b += b[i] 
+            return 2*(intersection)/(sum_a+sum_b)
+        
+
+    def calculate_euclidean_distance(self, a, b):
+        sum = 0
+        for i in range(len(a)):
+            sum = sum + (int(a[i]) - int(b[i]))**2
+        euclidean_distance = math.sqrt(sum)
+        return euclidean_distance
+
+
+    def calculate_similiarity_matrix(self):
+        points_num = len(self.data_binary)
+        # if self.function == "euclidean": 
+        #     data = self.data_binary 
+        # else: 
+        #     data = self.data_index
+
         matrix = np.zeros((points_num,points_num))
         for i in range(0, points_num):
-            a = data[i]
+            # a = data[i][0]
             for j in range(i+1,points_num):
-                b = data[j]
-                matrix[i][j] = self.calculate_jaccard_coefficient(a,b)
-                matrix[j][i] = self.calculate_jaccard_coefficient(a,b)
+                # b = data[j][0]
+                if self.function == "jaccard":
+                    # bin = self.calculate_jaccard_coefficient_binary(self.data_binary[i][0], self.data_binary[j][0])
+                    # index = self.calculate_jaccard_coefficient_index(self.data_index[i][0], self.data_index[j][0])
+                    # print(index, bin)
+                    matrix[i][j] = self.calculate_jaccard_coefficient_binary(self.data_binary[i][0], self.data_binary[j][0])
+                    matrix[j][i] = matrix[i][j]
+                elif self.function == "sorensen":
+                    matrix[i][j] = self.calculate_soresen_coefficient(self.data_binary[i][0], self.data_binary[j][0])
+                    matrix[j][i] = matrix[i][j]
+                elif self.function == "euclidean":
+                    matrix[i][j] = self.calculate_euclidean_distance(self.data_binary[i][0], self.data_binary[j][0])
+                    matrix[j][i] = matrix[i][j]
+                    
+
             matrix[i][i] = 1
         self.similarity_matrix = matrix
 
 
-    def calculate_adjacency_matrix(self, data, phi):
-        points_num = len(data)
+    def calculate_adjacency_matrix(self, phi):
+        points_num = len(self.data_binary)
         # points_num = data.shape[0] #df
         matrix = np.zeros((points_num,points_num))
-        self.calculate_similiarity_matrix(data)
+        self.calculate_similiarity_matrix()
         for i in range(0, points_num):
             for j in range(i+1,points_num):
                 if self.similarity_matrix[i][j] >= phi:
@@ -70,11 +141,8 @@ class ROCK:
         n_a = len(cluster_a)
         n_b = len(cluster_b)
         f = (1-theta)/(1+theta)
-        a = pow((n_a + n_b), (1+2*f))
-        b = pow(n_a, 1+2*f)
-        c = pow(n_b, 1+2*f)
         goodness = link_num / (pow((n_a + n_b), (1+2*f)) - pow(n_a, 1+2*f) - pow(n_b, 1+2*f)) 
-        return goodness
+        return abs(goodness)
 
 
     def get_clusters_to_merge(self, theta):
@@ -86,24 +154,27 @@ class ROCK:
             for j in range(i+1, len(self.clusters)):
                 b = self.clusters[j]
                 goodness = self.clusters_goodness(a, b, theta)
-                if(goodness > max_goodness):
+                if(goodness >= max_goodness):
                     max_goodness = goodness
                     a_cluster_to_merge = i
                     b_cluster_to_merge = j
         return (a_cluster_to_merge, b_cluster_to_merge)
 
 
-    def get_clusters(self, data, phi, cluster_num, theta = 0.5):
+    def get_clusters(self, theta, cluster_num, function = "jaccard"):
+        self.function = function
+
         # data = data.values.tolist()
-        theta = phi
-        self.calculate_adjacency_matrix(data, phi)
+        self.calculate_adjacency_matrix(theta)
         self.get_links_matrix(self.adjacency_matrix)
         self.clusters = []
-        for i in range(len(data)):
+        for i in range(len(self.data_binary)):
             self.clusters.append([i])
 
         while (len(self.clusters) > cluster_num):
             clusters_to_merge = self.get_clusters_to_merge(theta)
+            if clusters_to_merge == (None, None):
+                print("dupa")
             if clusters_to_merge != (None, None):
                 a = clusters_to_merge[0]
                 b = clusters_to_merge[1]
@@ -111,6 +182,12 @@ class ROCK:
                 self.clusters.pop(b)
             else:
                 break
+
+        for cluster in self.clusters:
+            cluster.sort()
+
+        self.get_clusters_points(self.data_binary, self.clusters)
+        self.get_clusters_as_classes()
         return self.clusters
     
     def get_clusters_points(self, data, clusters):
@@ -120,4 +197,28 @@ class ROCK:
             for point_index in cluster:
                 cluster_list.append(tuple(data[point_index]))
             clusters_points.append(cluster_list)
-        return clusters_points
+        self.clusters_points = clusters_points
+
+    def get_clusters_as_classes(self):
+        clusters = []
+        for cluster in self.clusters_points:
+            cluster_classes = []
+            for point in cluster:
+                cluster_classes.append(point[1])
+            cluster_classes.sort()
+            clusters.append(cluster_classes)
+        self.clusters_classes = clusters
+        return clusters
+         
+    
+    def get_score(self):
+        correctly_classified = 0
+        for cluster in self.clusters_classes:
+            most_frequent = max(set(cluster), key=cluster.count)
+            num_of_most_frequent = cluster.count(most_frequent)
+            correctly_classified += num_of_most_frequent
+        
+        return correctly_classified / self.number_of_points
+
+
+
